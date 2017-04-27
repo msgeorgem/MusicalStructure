@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 import static android.view.View.INVISIBLE;
 
@@ -15,22 +17,22 @@ import static android.view.View.INVISIBLE;
 
 public class ArtistsActivity extends AppCompatActivity {
 
-    private TextView mArtistsToDo;
-    private Button mArtistsButton;
-    private Button mFoldersButton;
-    private Button mNowPlayingButton;
-    private Button mSearchButton;
+    @BindView(R.id.artists_activity_todo)
+    TextView mArtistsToDo;
+    @BindView(R.id.artists_button)
+    TextView mArtistsButton;
+    @BindView(R.id.folder_button)
+    TextView mFoldersButton;
+    @BindView(R.id.playing_button)
+    TextView mNowPlayingButton;
+    @BindView(R.id.search_button)
+    TextView mSearchButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.demo_view);
-
-        mArtistsToDo =(TextView) findViewById(R.id.artists_activity_todo);
-        mArtistsButton =(Button) findViewById(R.id.artists_button);
-        mFoldersButton =(Button) findViewById(R.id.folder_button);
-        mNowPlayingButton =(Button) findViewById(R.id.playing_button);
-        mSearchButton =(Button) findViewById(R.id.search_button);
+        ButterKnife.bind(this);
 
         mSearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +78,6 @@ public class ArtistsActivity extends AppCompatActivity {
         mFoldersButton.setVisibility(View.INVISIBLE);
         mNowPlayingButton.setVisibility(View.INVISIBLE);
         mSearchButton.setVisibility(View.INVISIBLE);
-
 
     }
 }

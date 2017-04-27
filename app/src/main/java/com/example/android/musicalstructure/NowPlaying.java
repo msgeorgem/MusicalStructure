@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by Marcin on 2017-04-27.
@@ -13,22 +15,25 @@ import android.widget.TextView;
 
 public class NowPlaying extends AppCompatActivity {
 
-    private TextView mNowPlayingToDo;
-    private Button mArtistsButton;
-    private Button mFoldersButton;
-    private Button mNowPlayingButton;
-    private Button mSearchButton;
+    @BindView(R.id.now_playing_todo)
+    TextView mNowPlayingToDo;
+    @BindView(R.id.artists_button)
+    TextView mArtistsButton;
+    @BindView(R.id.folder_button)
+    TextView mFoldersButton;
+    @BindView(R.id.playing_button)
+    TextView mNowPlayingButton;
+    @BindView(R.id.search_button)
+    TextView mSearchButton;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.demo_view);
+        ButterKnife.bind(this);
 
-        mNowPlayingToDo =(TextView) findViewById(R.id.now_playing_todo);
-        mArtistsButton =(Button) findViewById(R.id.artists_button);
-        mFoldersButton =(Button) findViewById(R.id.folder_button);
-        mNowPlayingButton =(Button) findViewById(R.id.playing_button);
-        mSearchButton =(Button) findViewById(R.id.search_button);
 
         mSearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
