@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/tan_background1">
+    android:background="@color/tan_background1"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,23 +19,23 @@
 
             <TextView
                 android:id="@+id/artists_activity_todo"
-                android:text="@string/todo_artists"
-                style="@style/StandardTextStyle" />
+                style="@style/StandardTextStyle"
+                android:text="@string/todo_artists" />
 
             <TextView
                 android:id="@+id/folders_activity_todo"
-                android:text="@string/todo_folders"
-                style="@style/StandardTextStyle" />
+                style="@style/StandardTextStyle"
+                android:text="@string/todo_folders" />
 
             <TextView
                 android:id="@+id/now_playing_todo"
-                android:text="@string/todo_now_playing"
-                style="@style/StandardTextStyle" />
+                style="@style/StandardTextStyle"
+                android:text="@string/todo_now_playing" />
 
             <TextView
                 android:id="@+id/search_activity_todo"
-                android:text="@string/todo_search"
-                style="@style/StandardTextStyle" />
+                style="@style/StandardTextStyle"
+                android:text="@string/todo_search" />
         </FrameLayout>
     </LinearLayout>
 
@@ -48,23 +48,23 @@
 
             <Button
                 android:id="@+id/artists_button"
-                android:text="Artists"
-                style="@style/StandardButtonStyle" />
+                style="@style/StandardButtonStyle"
+                android:text="Artists" />
 
             <Button
-                android:id="@+id/folder_button"
-                android:text="Folders"
-                style="@style/StandardButtonStyle" />
+                android:id="@+id/folders_button"
+                style="@style/StandardButtonStyle"
+                android:text="Folders" />
 
             <Button
                 android:id="@+id/search_button"
-                android:text="Search"
-                style="@style/StandardButtonStyle" />
+                style="@style/StandardButtonStyle"
+                android:text="Search" />
 
             <Button
                 android:id="@+id/playing_button"
-                android:text="Playing"
-                style="@style/StandardButtonStyle" />
+                style="@style/StandardButtonStyle"
+                android:text="Playing" />
 
 
     </LinearLayout>

@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 import static android.view.View.INVISIBLE;
 
@@ -21,7 +22,7 @@ public class ArtistsActivity extends AppCompatActivity {
     TextView mArtistsToDo;
     @BindView(R.id.artists_button)
     TextView mArtistsButton;
-    @BindView(R.id.folder_button)
+    @BindView(R.id.folders_button)
     TextView mFoldersButton;
     @BindView(R.id.playing_button)
     TextView mNowPlayingButton;
@@ -33,41 +34,33 @@ public class ArtistsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.demo_view);
         ButterKnife.bind(this);
-
-        mSearchButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent SearchActivity = new Intent(ArtistsActivity.this, SearchActivity.class);
-                startActivity(SearchActivity);
-            }
-        });
-
-        mNowPlayingButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent NowPlayingIntent = new Intent(ArtistsActivity.this, NowPlaying.class);
-                startActivity(NowPlayingIntent);
-            }
-        });
-
-        mFoldersButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent FoldersActivity = new Intent(ArtistsActivity.this, FoldersActivity.class);
-                startActivity(FoldersActivity);
-            }
-        });
-
         showArtistsToDo();
-
     }
+
+    @OnClick(R.id.playing_button)
+    public void onClickPlaying() {
+        Intent NowPlayingActivity = new Intent(ArtistsActivity.this, NowPlaying.class);
+        startActivity(NowPlayingActivity);
+    }
+
+    @OnClick(R.id.search_button)
+    public void onClickSearch() {
+        Intent SearchActivity = new Intent(ArtistsActivity.this, SearchActivity.class);
+        startActivity(SearchActivity);
+    }
+
+    @OnClick(R.id.folders_button)
+    public void onClickFolders() {
+        Intent FoldersIntent = new Intent(ArtistsActivity.this, FoldersActivity.class);
+        startActivity(FoldersIntent);
+    }
+
     private void showArtistsToDo(){
         mArtistsToDo.setVisibility(View.VISIBLE);
         mArtistsButton.setVisibility(View.INVISIBLE);
         mFoldersButton.setVisibility(View.VISIBLE);
         mNowPlayingButton.setVisibility(View.VISIBLE);
         mSearchButton.setVisibility(View.VISIBLE);
-
     }
 
 
@@ -78,6 +71,5 @@ public class ArtistsActivity extends AppCompatActivity {
         mFoldersButton.setVisibility(View.INVISIBLE);
         mNowPlayingButton.setVisibility(View.INVISIBLE);
         mSearchButton.setVisibility(View.INVISIBLE);
-
     }
 }

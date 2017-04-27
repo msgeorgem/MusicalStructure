@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Marcin on 2017-04-27.
@@ -19,7 +20,7 @@ public class SearchActivity extends AppCompatActivity {
     TextView mSearchActivityToDo;
     @BindView(R.id.artists_button)
     TextView mArtistsButton;
-    @BindView(R.id.folder_button)
+    @BindView(R.id.folders_button)
     TextView mFoldersButton;
     @BindView(R.id.playing_button)
     TextView mNowPlayingButton;
@@ -31,32 +32,25 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.demo_view);
         ButterKnife.bind(this);
-
-
-        mFoldersButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent FoldersActivity = new Intent(SearchActivity.this, FoldersActivity.class);
-                startActivity(FoldersActivity);
-            }
-        });
-
-        mNowPlayingButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent NowPlayingIntent = new Intent(SearchActivity.this, NowPlaying.class);
-                startActivity(NowPlayingIntent);
-            }
-        });
-
-        mArtistsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent ArtistsActivity = new Intent(SearchActivity.this, ArtistsActivity.class);
-                startActivity(ArtistsActivity);
-            }
-        });
         showSearchToDo();
+    }
+
+    @OnClick(R.id.playing_button)
+    public void onClickPlaying() {
+        Intent NowPlayingActivity = new Intent(SearchActivity.this, NowPlaying.class);
+        startActivity(NowPlayingActivity);
+    }
+
+    @OnClick(R.id.folders_button)
+    public void onClickFolders() {
+        Intent FoldersActivity = new Intent(SearchActivity.this, FoldersActivity.class);
+        startActivity(FoldersActivity);
+    }
+
+    @OnClick(R.id.artists_button)
+    public void onClickArtists() {
+        Intent ArtistsIntent = new Intent(SearchActivity.this, ArtistsActivity.class);
+        startActivity(ArtistsIntent);
     }
 
     private void showSearchToDo(){
