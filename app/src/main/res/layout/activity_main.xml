@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tan_background"
+    android:orientation="vertical">
+
+
+    <!-- NowPlaying category -->
+
+    <TextView
+        android:id="@+id/now_playing"
+        style="@style/CategoryStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/now_playing"
+        android:text="@string/now_playing"
+        android:layout_margin="2dp"/>
+
+
+    <!-- Search category -->
+
+    <TextView
+        android:id="@+id/search_activity"
+        style="@style/CategoryStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/search_activity"
+        android:text="@string/search_activity"
+        android:layout_margin="2dp"/>
+
+
+    <!-- Folders category -->
+
+    <TextView
+        android:id="@+id/folders_activity"
+        style="@style/CategoryStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/folders_activity"
+        android:text="@string/folders_activity"
+        android:layout_margin="2dp"/>
+
+
+    <!-- Artists category -->
+
+    <TextView
+        android:id="@+id/artists_activity"
+        style="@style/CategoryStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/artists_activity"
+        android:text="@string/artists_activity"
+        android:layout_margin="2dp"/>
+
+</LinearLayout>
+

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tan_background1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/artists_activity_todo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/todo_artists"
+                android:textSize="32sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/folders_activity_todo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/todo_folders"
+                android:textSize="32sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/now_playing_todo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/todo_now_playing"
+                android:textSize="32sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/search_activity_todo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/todo_search"
+                android:textSize="32sp"
+                android:visibility="invisible" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/artists_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Artists"
+                android:textSize="16dp"
+                android:visibility="invisible"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/folder_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Folders"
+                android:textSize="16dp"
+                android:visibility="invisible"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/search_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Search"
+                android:textSize="16dp"
+                android:visibility="invisible"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/playing_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Playing"
+                android:textSize="16dp"
+                android:visibility="invisible"
+                android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
