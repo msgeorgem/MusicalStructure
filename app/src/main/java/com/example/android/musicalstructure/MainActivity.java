@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(v.getContext(), "Open the Artists view", Toast.LENGTH_SHORT).show();
                 Intent ArtistsActivityIntent = new Intent(MainActivity.this, ArtistsActivity.class);
                 startActivity(ArtistsActivityIntent);
+                finish();
             }
         });
 
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(v.getContext(), "Open the folders view", Toast.LENGTH_SHORT).show();
                 Intent FoldersActivity = new Intent(MainActivity.this, FoldersActivity.class);
                 startActivity(FoldersActivity);
+                finish();
             }
         });
         //Find the View that shows the now playing category
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(v.getContext(), "Open the now playing view", Toast.LENGTH_SHORT).show();
                 Intent NowPlayingIntent = new Intent(MainActivity.this, NowPlaying.class);
                 startActivity(NowPlayingIntent);
+                finish();
             }
         });
         //Find the View that shows the Search category
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(v.getContext(), "Open the search view", Toast.LENGTH_SHORT).show();
                 Intent SearchActivity = new Intent(MainActivity.this, SearchActivity.class);
                 startActivity(SearchActivity);
+                finish();
             }
         });
     }

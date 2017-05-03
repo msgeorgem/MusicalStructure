@@ -39,18 +39,21 @@ public class SearchActivity extends AppCompatActivity {
     public void onClickPlaying() {
         Intent NowPlayingActivity = new Intent(SearchActivity.this, NowPlaying.class);
         startActivity(NowPlayingActivity);
+        finish();
     }
 
     @OnClick(R.id.folders_button)
     public void onClickFolders() {
         Intent FoldersActivity = new Intent(SearchActivity.this, FoldersActivity.class);
         startActivity(FoldersActivity);
+        finish();
     }
 
     @OnClick(R.id.artists_button)
     public void onClickArtists() {
         Intent ArtistsIntent = new Intent(SearchActivity.this, ArtistsActivity.class);
         startActivity(ArtistsIntent);
+        finish();
     }
 
     private void showSearchToDo(){

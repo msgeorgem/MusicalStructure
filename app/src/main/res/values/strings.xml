@@ -7,7 +7,7 @@
     <string name="now_playing">Now playing</string>
     <string name="todo_artists">Currently found files in an Artist order. Play button next to every file. </string>
     <string name="todo_folders">Folders view allowing to access sdcard. Play button next to every file.</string>
-    <string name="todo_now_playing">All music player functions, including progress bar, all buttons necessary in music app, volume control, cover, title, meta data </string>
+    <string name="todo_now_playing">All music player functions, including progress bar, all buttons necessary in music app, volume control, cover, title, meta data.Implementation of MediaPlayer class and AudioManager </string>
     <string name="todo_search">Search field allowing to type any whim and below the results of the search. Play button next to every file.</string>
 
 </resources>
